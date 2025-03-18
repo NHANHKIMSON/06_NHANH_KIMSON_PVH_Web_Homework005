@@ -12,13 +12,13 @@ export const data = [
     id: 2,
     icon: <Book className='w-7' color='red' />,
     title: "Book Categories",
-    link: "/"
+    link: "/book-categories"
   },
   {
     id: 3,
     icon: <EmojiHappy className='w-7' color='red' />,
     title: "Old-School Cartoons",
-    link: "/"
+    link: "/old-school-cartoons"
   },
   {
     id: 4,

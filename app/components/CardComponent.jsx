@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Card(items) {
   return (
-    <div className="relative">
+    <div className="relative" key={items.id}>
       <img
         alt="book cover"
         loading="lazy"

@@ -1,8 +1,9 @@
-import Card from "../components/CardComponent";
-import Search from "../components/SearchComponent";
-import book, { getAllBook } from "../service/product-service";
-const  Home = async () => {
-  const books = await getAllBook();
+import Card from "@/app/components/CardComponent";
+import Carttoon, { getAllCartoon } from "../../service/old-school-cartoon-service";
+
+
+const Cartoon = async () =>{
+    const books = await getAllCartoon();
   return (
     <>
       <div className="flex justify-between border-b mt-6 pb-4 border-b-teal-700 bg-slate-100 rounded-t-2xl p-4">
@@ -29,5 +30,6 @@ const  Home = async () => {
       </div>
     </>
   );
-};
-export default Home;
+}
+
+export default Cartoon;
