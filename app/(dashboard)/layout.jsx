@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
       </button>
       <Sidebar/>
 
-      <div className="sm:ml-96 flex flex-col items-center dark:bg-black dark:text-white overflow-y-hidden">
-        <div className="p-4 border-dashed rounded-lg dark:border-gray-700 w-full max-w-4xl">
+      <div className="sm:ml-80 flex flex-col items-center dark:bg-black dark:text-white overflow-y-hidden bg-slate-100">
+        <div className="p-4 border-dashed rounded-lg dark:border-gray-700 w-full max-w-6xl bg-slate-100">
           {/* Search Component */}
           <div className="w-full mb-4 h-screen overflow-y-hidden">
             <Search />

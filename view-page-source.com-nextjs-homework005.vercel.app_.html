@@ -352,7 +352,8 @@
           <div>
             <div class="flex gap-20 justify-center py-27">
               <a href="/book-categories"
-                ><div class="relative">
+                >
+                <div class="relative">
                   <img
                     alt="book cover"
                     loading="lazy"
@@ -409,7 +410,8 @@
                       View All Available Books
                     </p>
                   </div>
-                </div></a
+                </div>
+                </a
               ><a href="/old-school-cartoons"
                 ><div class="relative">
                   <img
@@ -505,3 +507,42 @@
 //     <div classNameName="absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
 //   </div>
 // </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="flex justify-between border-b mt-6 pb-4 border-b-teal-700 bg-slate-100 rounded-t-2xl p-4">
+  <a className="text-teal-700 px-8 py-2 rounded-2xl bg-slate-100">Home</a>
+  {/* Category */}
+  <form action="">
+    <select
+      name="category"
+      id=""
+      className="text-teal-700 px-8 py-2 rounded-2xl bg-slate-100"
+    >
+      {category.map((items, index) => (
+        <option key={index} value={items}>
+          {items}
+        </option>
+      ))}
+    </select>
+  </form>
+</div>
+<div className="h-[80%] w-full overflow-y-scroll">
+  <div className="flex justify-center rounded-b-4xl pb-4 bg-slate-100">
+    <div className="flex justify-evenly w-full flex-wrap gap-6 mt-8">
+      {book.payload.map((items) => (
+        <Card key={items.id} {...items} />
+      ))}
+    </div>
+  </div>
+</div>

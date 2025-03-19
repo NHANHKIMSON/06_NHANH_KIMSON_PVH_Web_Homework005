@@ -1,7 +1,7 @@
 import Card from "../components/CardComponent";
 import Search from "../components/SearchComponent";
-import book, { getAllBook } from "../service/product-service";
-const  Home = async () => {
+import book, { getAllBook } from "../service/book-service";
+const Home = async () => {
   const books = await getAllBook();
   return (
     <>
