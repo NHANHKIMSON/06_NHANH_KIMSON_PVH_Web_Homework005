@@ -47,7 +47,9 @@ export default function Card(items) {
           <p className="text-deep-teal font-medium">{items.nane}</p>
         </div>
         <div className="absolute top-0 w-full h-full rounded-3xl flex items-center justify-center bg-black/0 hover:bg-black/35 opacity-0 hover:opacity-100 transition-opacity duration-300 text-center">
+        <Link href={items.link}>
           <p className="text-4xl text-white w-44">{items.title}</p>
+        </Link>
         </div>
       </div>
     </>
