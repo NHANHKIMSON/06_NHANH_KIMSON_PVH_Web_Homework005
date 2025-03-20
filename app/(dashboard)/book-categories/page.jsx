@@ -5,6 +5,7 @@ import book, {
   getAllBook,
   getAllCategory,
   getBookByCategory,
+  getCategoryById,
   searchBookByTitle,
   searchCartoonByTitle,
 } from "../../service/book-service";
@@ -12,13 +13,17 @@ import FilterComponent from "@/app/components/FilterComponent";
 const Home = async ({ searchParams }) => {
   const category = await getAllCategory();
   const query = (await searchParams).query;
+  const cateById = await getCategoryById(query);
   const search = (await searchParams).search;
   const books = search ? await searchBookByTitle(search) : await getAllBook(query);
 
   return (
     <>
       <div className="flex justify-between mt-6 pb-4 bg-white rounded-t-2xl p-4">
-        <a className="text-teal-700 px-8 py-2 rounded-2xl bg-slate-100">Home</a>
+        <a className="text-teal-700 px-8 py-2 rounded-2xl bg-slate-100">
+          {query ? `${cateById.payload.book_cate_name}`  : "Book Categoris"}
+           
+          </a>
         <FilterComponent allCategory={category.payload} />
         {/* co */}
       </div>

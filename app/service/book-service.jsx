@@ -53,3 +53,10 @@ export async function searchBookByTitle(params) {
   const json = res.json();
   return json;
 }
+
+
+export async function getCategoryById(params) {
+  const res = await fetch(`https://nextjs-homework005.vercel.app/api/book_category/search?query=${params}`);
+  const result = res.json();
+  return result;
+}

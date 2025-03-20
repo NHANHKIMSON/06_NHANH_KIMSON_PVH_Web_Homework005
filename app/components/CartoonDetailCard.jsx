@@ -47,11 +47,11 @@ const CartoonDetailCard = ({ cartoon }) => {
                       strokeLinejoin="round"
                     ></path>
                   </svg>
-                  <span className="text-teal-600">{cartoon.view_count}</span>
+                  <span className="text-teal-600">{cartoon.payload.view_count}</span>
                    times
                 </p>
                 <p className="text-teal-600">|</p>
-                <p className="text-teal-600">{cartoon.published_year?.split('-')[0] || 'N/A'}</p>
+                <p className="text-teal-600">{cartoon.payload.published_year?.split('-')[0] || 'N/A'}</p>
               </div>
           </div>
           <p className="text-justify">

@@ -24,42 +24,42 @@ export const data = [
     id: 4,
     icon:  <Video className='w-7' color='red' />,
     title: "Movies & TV Shows",
-    link: "/"
+    link: "/#"
   },
   {
     id: 5,
     icon: <Music className='w-7' color='red' />,
     title: "Music",
-    link: "/"
+    link: "/#"
   },
   {
     id: 6,
     icon: <Camera className='w-7' color='red' />,
     title: "Photography",
-    link: "/"
+    link: "/#"
   },
   {
     id: 7,
     icon: <Weight className='w-7' color='red' />,
     title: "Sports & Fitness",
-    link: "/"
+    link: "/#"
   },
   {
     id: 8,
     icon: <Code className='w-7' color='red'/>,
     title: "Technology & Gadgets",
-    link: "/"
+    link: "/#"
   },
   {
     id: 9,
     icon: <Airplane className='w-7' color='red'/>,
     title: "Travel & Exploration",
-    link: "/"
+    link: "/#"
   },
   {
     id: 10,
     icon: <Edit className='w-7' color='red'/>,
     title: "Writing & Journaling",
-    link: "/"
+    link: "/#"
   },
 ];
