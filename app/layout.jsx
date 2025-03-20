@@ -3,7 +3,7 @@ import Sidebar from "./components/SidebarCompoent";
 import Search from "./components/SearchComponent";
 
 import "./globals.css";
-import Layout from "./components/layout";
+import Layout from "./components/un";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

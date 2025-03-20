@@ -1,6 +1,18 @@
+"use client";
+import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
+
 export default function Search() {
+  // const route = useRouter();
+  // const handleSearch = (e) => {
+  //   route.replace(`?query-search=${e.target.value}`);
+  // };
+  const path_name = usePathname();
+  // console.log(path_name);
+  
+  
   return (
-    <form className="w-full mx-auto">
+    <form className="w-full mx-auto" action={path_name}>
       <label
         htmlFor="default-search"
         className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -27,7 +39,8 @@ export default function Search() {
         </div>
         <input
           type="search"
-          id="default-search"
+          id="search"
+          name="search"
           className="block w-full py-4 px-16 text-sm text-gray-900 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search Mockups, Logos..."
           required

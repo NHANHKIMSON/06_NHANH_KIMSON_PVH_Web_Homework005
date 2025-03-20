@@ -1,7 +1,9 @@
-import Card from "@/app/components/CardComponent";
+// import Card from "@/app/components/CardComponentCartoon";
+import CardCartoon from "@/app/components/CardComponentCartoon";
 import Carttoon, {
   getAllCartoon,
   getCartoonByGenre,
+  getCartoonSearh,
 } from "../../service/old-school-cartoon-service";
 import FilterComponent from "@/app/components/FilterComponentCartoon";
 import getAllCartoonGenre from "../../service/old-school-cartoon-service";
@@ -10,9 +12,11 @@ const Cartoon = async ({ searchParams }) => {
   const cartoon_genre = await getAllCartoonGenre();
   const query = (await searchParams).query;
   const cartoonByGenre  = await getCartoonByGenre(query);
-  // console.log(cartoonByGenre);
+
+  const search = (await searchParams).search;
   
-  const cartoons = await getAllCartoon(query);
+  // const cartoons =;
+  const cartoons = search ? await getCartoonSearh(search) :  await getAllCartoon(query);
 
   return (
     <>
@@ -25,7 +29,7 @@ const Cartoon = async ({ searchParams }) => {
         <div className="flex justify-center rounded-b-4xl pb-4 bg-slate-100">
           <div className="flex justify-evenly w-full flex-wrap gap-6 mt-8">
             {cartoons.payload.map((items) => (
-              <Card key={items.id} {...items} />
+              <CardCartoon key={items.id} {...items} />
             ))}
           </div>
         </div>

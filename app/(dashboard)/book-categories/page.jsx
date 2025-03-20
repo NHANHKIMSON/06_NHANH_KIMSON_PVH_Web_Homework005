@@ -5,13 +5,16 @@ import book, {
   getAllBook,
   getAllCategory,
   getBookByCategory,
+  searchBookByTitle,
+  searchCartoonByTitle,
 } from "../../service/book-service";
 import FilterComponent from "@/app/components/FilterComponent";
 const Home = async ({ searchParams }) => {
   const category = await getAllCategory();
   const query = (await searchParams).query;
-  console.log(query);
-  const books = await getAllBook(query);
+  const search = (await searchParams).search;
+  const books = search ? await searchBookByTitle(search) : await getAllBook(query);
+
   return (
     <>
       <div className="flex justify-between mt-6 pb-4 bg-white rounded-t-2xl p-4">

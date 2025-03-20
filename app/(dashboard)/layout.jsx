@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <div className="p-4 border-dashed rounded-lg dark:border-gray-700 w-full max-w-6xl bg-slate-100">
           {/* Search Component */}
           <div className="w-full mb-4 h-screen overflow-y-hidden">
-            <Search />
+          <Search />
             {children}
           </div>
         </div>

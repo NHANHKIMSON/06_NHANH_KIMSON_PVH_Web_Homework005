@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function CardBookCategory(items) {
   return (
-    <div className="mt-56 bg-slate-100 rounded-2xl">
+    <div className="mt-36 bg-slate-100 rounded-2xl">
       <div className="flex px-11 py-7 bg-ghost-white rounded-4xl h-58 max-w-[500px] drop-shadow-sm">
         <div className="relative w-1/2">
-          <div className="w-45 h-62 relative -top-34">
+          <div className="w-45 h-62 relative -top-40">
             <img
               alt=""
               className="rounded-2xl drop-shadow-lg"
@@ -19,7 +19,7 @@ export default function CardBookCategory(items) {
           </div>
           <Link
             href="/"
-            className="uppercase bg-light-blue absolute bottom-0 px-3.5 py-2.5 rounded-full w-45 hover:bg-deep-teal hover:text-ghost-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1"
+            className="uppercase bg-light-blue absolute bottom-0 px-3.5 py-2.5 rounded-full w-45 bg-slate-300 hover:bg-teal-700 hover:text-white hover:text-ghost-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1"
           >
             Read Full Article
           </Link>
