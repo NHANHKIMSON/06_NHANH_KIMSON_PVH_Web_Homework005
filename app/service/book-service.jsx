@@ -38,7 +38,7 @@ export async function getBookByCategory(params) {
 
 export async function getBookById(params) {
   try {
-    const res = await fetch(`https://nextjs-homework005.vercel.app/api/book/4`);
+    const res = await fetch(`https://nextjs-homework005.vercel.app/api/book/${params}`);
     const getBookByIdData = res.json();
     return getBookByIdData;
   } catch (erorr) {

@@ -1,19 +1,20 @@
 import BookDetailCard from "@/app/components/BookDetailCard";
 import { getAllBook, getBookById } from "@/app/service/book-service";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function BookDetail({ params }) {
-  const book = await getBookById();
-  const id = (await params).bookId;
-  console.log("id :" , id); 
+  const { bookId } = params;
+  const book = await getBookById(bookId);
+  // console.log("Book ID:", bookId);
   return (
     <div className="bg-whiteSmokeCustom">
       <div className="relative px-10 py-12 mx-auto bg-slate-200 h-screen">
         {/* Breadcrumbs */}
         <div className="flex gap-5 items-center">
-          <a
+          <Link
             className="flex gap-2 font-medium text-lg items-center hover:text-deep-teal group"
-            href="/"
+            href={`/`}
           >
             <svg
               className="group-hover:hidden"
@@ -55,7 +56,7 @@ export default async function BookDetail({ params }) {
               ></path>
             </svg>
             <p>Home</p>
-          </a>
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -119,7 +120,7 @@ export default async function BookDetail({ params }) {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            <p className="capitalize">old school cartoons</p>
+            <p className="capitalize">Book Categories</p>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +154,7 @@ export default async function BookDetail({ params }) {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            <p className="text-red-crimson capitalize">Tom &amp; Jerry</p>
+            <p className="text-red-crimson capitalize">{book.payload.book_title}</p>
           </div>
         </div>
         {/* Text Content */}

@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function CardBookCategory(items) {
-  const id = useRouter();
-  
   return (
     <div className="mt-36 bg-slate-100 rounded-2xl">
       <div className="flex px-11 py-7 bg-ghost-white rounded-4xl h-58 max-w-[500px] drop-shadow-sm">
