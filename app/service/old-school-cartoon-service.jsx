@@ -20,6 +20,14 @@ export async function getCartoonByGenre(params) {
   return result;
 }
 
+
+export  async function getGenreById(params) {
+  const res = await fetch(`https://nextjs-homework005.vercel.app/api/cartoon_genre/search?genre=${params}`);
+  const result = res.json();
+  return result;
+  
+}
+
 export default async function getAllCartoonGenre(params) {
   try {
     const res = await fetch(
