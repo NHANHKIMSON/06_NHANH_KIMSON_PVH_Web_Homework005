@@ -1,11 +1,13 @@
-import BookDetailCard from "@/app/components/BookDetailCard";
+import CardCartoonDetail from "@/app/components/CartoonDetailCard";
 import { getAllBook, getBookById } from "@/app/service/book-service";
+import { getCartoonById } from "@/app/service/old-school-cartoon-service";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function BookDetail({ params }) {
-  const { bookId } = params;
-  const book = await getBookById(bookId);
+  const { cartoonId } = params;
+  const cartoon = await getCartoonById(cartoonId);
+  console.log("Carton:", cartoon);
   return (
     <div className="bg-whiteSmokeCustom">
       <div className="relative px-10 py-12 mx-auto bg-slate-200 h-screen">
@@ -119,7 +121,9 @@ export default async function BookDetail({ params }) {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            <Link href={`/book-categories`} className="capitalize">Book Categories</Link>
+            <Link href={`/old-school-cartoons`} className="capitalize">
+              Cartoon Genre
+            </Link>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -153,11 +157,13 @@ export default async function BookDetail({ params }) {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            <p className="text-red-crimson capitalize">{book.payload.book_title}</p>
+            <p className="text-red-crimson capitalize">
+              {cartoon.payload.ct_title}
+            </p>
           </div>
         </div>
         {/* Text Content */}
-        <BookDetailCard book={book} />
+        <CardCartoonDetail cartoon={cartoon} />
       </div>
     </div>
   );

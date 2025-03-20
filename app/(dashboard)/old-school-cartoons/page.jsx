@@ -15,7 +15,6 @@ const Cartoon = async ({ searchParams }) => {
 
   const search = (await searchParams).search;
   
-  // const cartoons =;
   const cartoons = search ? await getCartoonSearh(search) :  await getAllCartoon(query);
 
   return (

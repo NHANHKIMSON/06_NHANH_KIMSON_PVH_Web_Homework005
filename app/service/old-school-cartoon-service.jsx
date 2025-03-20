@@ -38,3 +38,12 @@ export async function getCartoonSearh(params) {
   const json = res.json();
   return json;
 }
+
+
+
+export async function getCartoonById(params) {
+  const res = await fetch(`https://nextjs-homework005.vercel.app/api/cartoon/${params}`);
+  const result = res.json();
+  return result;
+  
+}

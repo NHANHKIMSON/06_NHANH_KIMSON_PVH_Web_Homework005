@@ -6,7 +6,7 @@ export default function CardCartoon(items) {
     <>
       <div className="mb-20">
         <div>
-          <Link href="/books-detail" className="space-y-4">
+          <Link href={`/cartoon-detail/${items.id}`} className="space-y-4">
             <div className="w-80 h-[420px] relative">
               <img
                 alt={items.ct_title}
